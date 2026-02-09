@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareLink+ | Admin Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+    <aside class="sidebar">
+        <div class="logo-area">
+            <div class="logo">CareLink<span>+</span></div>
+        </div>
+        <nav class="side-nav">
+            <a href="#" class="nav-item active"><i class="fas fa-th-large"></i> Overview</a>
+            <a href="#" class="nav-item"><i class="fas fa-user-graduate"></i> Students List</a>
+            <a href="#" class="nav-item"><i class="fas fa-map-marked-alt"></i> Live Tracking</a>
+            <a href="#" class="nav-item"><i class="fas fa-history"></i> Alert Logs</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="nav-item"><i class="fas fa-sign-out-alt"></i> Back to Home</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="dash-header">
+            <div>
+                <h2>PDK Semangat Maju</h2>
+                <span class="subtitle">Live Monitoring Command Center</span>
+            </div>
+            <div class="date-badge">
+                <i class="far fa-calendar-alt"></i> <span id="currentDate">Loading...</span>
+            </div>
+        </div>
+
+        <div class="kpi-grid">
+            <div class="card blue-border">
+                <div><h3 id="activeStudents">0</h3><p>Monitored Students</p></div>
+                <div class="icon-box blue-bg"><i class="fas fa-users"></i></div>
+            </div>
+            <div class="card green-border">
+                <div><h3 id="avgHeartRate">0</h3><p>Avg Heart Rate</p></div>
+                <div class="icon-box green-bg"><i class="fas fa-heartbeat"></i></div>
+            </div>
+            <div class="card red-border" id="alertCard">
+                <div><h3 id="alertCount">0</h3><p>Critical Alerts</p></div>
+                <div class="icon-box red-bg"><i class="fas fa-exclamation-triangle"></i></div>
+            </div>
+        </div>
+
+        <div class="data-grid">
+            <div class="panel">
+                <div class="panel-header"><h3>Live Vitals</h3></div>
+                <table>
+                    <thead>
+                        <tr><th>ID</th><th>Name</th><th>BPM</th><th>Status</th><th>Action</th></tr>
+                    </thead>
+                    <tbody id="studentTableBody"></tbody>
+                </table>
+            </div>
+            <div class="panel">
+                <div class="panel-header"><h3>Stress Analysis (30 Min)</h3></div>
+                <div class="chart-wrapper"><canvas id="heartRateChart"></canvas></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
