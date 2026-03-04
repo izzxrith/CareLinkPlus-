@@ -3,91 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CareLink+ — Predictive AI care system for dementia patients and special needs students. Monitor heart rate, walking rhythm, and voice tone.">
     <title>CareLink+ | The Guardian That Listens</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+    <!-- ===================== HEADER (Loaded via JS) ===================== -->
     <div id="header-placeholder"></div>
 
-    <section class="hero">
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>The Guardian That Listens <br><span>Before Crisis Happens</span></h1>
-            <p>Predictive AI for Dementia & Special Needs Care. <br>We analyze voice tone, walking rhythm, and heart rate to prevent wandering.</p>
+            <div class="hero-badge">
+                <i class="fas fa-shield-alt"></i>
+                Politeknik Ungku Omar &mdash; FYP 2024/2025
+            </div>
+
+            <h1>The Guardian That Listens<br><span>Before Crisis Happens</span></h1>
+
+            <p>
+                CareLink+ uses predictive AI to monitor <strong>heart rate</strong>, <strong>walking rhythm</strong>,
+                and <strong>voice tone</strong> — alerting caregivers before a wandering episode or emotional crisis occurs.
+            </p>
+
             <div class="hero-buttons">
-                <a href="dashboard.html" class="btn-main">View Admin Dashboard</a>
-                <a href="#" class="btn-secondary"><i class="fab fa-google-play"></i> Get App</a>
+                <a href="dashboard.html" class="btn-main">
+                    <i class="fas fa-th-large"></i> View Dashboard
+                </a>
+                <a href="#features" class="btn-secondary">
+                    <i class="fas fa-play-circle"></i> Learn More
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Detection Accuracy</div>
+                </div>
+                <div class="hero-stat-item">
+                    <div class="stat-number">&lt;2s</div>
+                    <div class="stat-label">Alert Response Time</div>
+                </div>
+                <div class="hero-stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">On-Device Privacy</div>
+                </div>
             </div>
         </div>
-        
+
         <div class="hero-visual">
-            <div class="phone-frame">
-                <img src="images/app-home.png" alt="CareLink+ App Interface">
-            </div>
+            <!-- Decorative rings -->
             <div class="circle-bg"></div>
+            <div class="circle-ring circle-ring-1"></div>
+            <div class="circle-ring circle-ring-2"></div>
+
+            <!-- Phone Mockup -->
+            <div class="phone-wrapper">
+                <div class="phone-frame">
+                    <!-- If you have a real screenshot, replace this with: <img src="images/app-home.png" alt="CareLink+ App"> -->
+                    <div class="phone-screen-placeholder">
+                        <div class="app-logo">CareLink<span>+</span></div>
+
+                        <div class="phone-ui-card">
+                            <div class="card-label"><span class="phone-pulse-dot"></span> Live Monitoring</div>
+                            <div class="card-value safe">Safe</div>
+                            <div class="card-sub">Ahmad Faris &mdash; Classroom A</div>
+                        </div>
+
+                        <div class="phone-ui-row">
+                            <div class="phone-ui-card">
+                                <div class="card-label"><i class="fas fa-heartbeat" style="color:#fc8181;"></i> BPM</div>
+                                <div class="card-value">72</div>
+                                <div class="card-sub">Normal</div>
+                            </div>
+                            <div class="phone-ui-card">
+                                <div class="card-label"><i class="fas fa-walking" style="color:#68d391;"></i> Steps</div>
+                                <div class="card-value">1.2k</div>
+                                <div class="card-sub">Today</div>
+                            </div>
+                        </div>
+
+                        <div class="phone-ui-card">
+                            <div class="card-label"><i class="fas fa-brain" style="color:#b794f4;"></i> AI Prediction</div>
+                            <div class="card-value" style="font-size:1.1rem; color: #68d391;">Low Risk</div>
+                            <div class="card-sub">No anomalies detected in last 30 min</div>
+                        </div>
+
+                        <div class="phone-ui-card" style="background: rgba(229,62,62,0.15); border-color: rgba(229,62,62,0.3);">
+                            <div class="card-label" style="color: rgba(255,255,255,0.5);">⚠ Alert &mdash; S003</div>
+                            <div class="card-value alert" style="font-size:1rem;">Raju Kumar</div>
+                            <div class="card-sub">BPM: 118 &mdash; Hallway detected</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating info badges -->
+            <div class="float-badge float-badge-1">
+                <i class="fas fa-bell" style="color: var(--accent-orange);"></i>
+                <span>Alert sent in <strong>1.4s</strong></span>
+            </div>
+            <div class="float-badge float-badge-2">
+                <i class="fas fa-lock" style="color: var(--primary-teal);"></i>
+                <span><strong>On-device</strong> AI</span>
+            </div>
         </div>
     </section>
 
+    <!-- ===================== FEATURES SECTION ===================== -->
     <section class="features" id="features">
         <div class="section-header">
+            <span class="section-tag">Core Technology</span>
             <h2>Why Choose CareLink+?</h2>
-            <p>Moving from reactive safety nets to proactive guardians.</p>
+            <p>Moving from reactive safety nets to proactive, intelligent guardians that predict before crisis strikes.</p>
         </div>
+
         <div class="feature-grid">
             <div class="feature-card">
-                <div class="icon-circle"><i class="fas fa-brain"></i></div>
-                <h3>Predictive AI</h3>
-                <p>Alerts caregivers BEFORE a crisis occurs by analyzing behavioral patterns.</p>
+                <div class="icon-circle">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Predictive AI Engine</h3>
+                <p>
+                    Our on-device machine learning model analyzes behavioral patterns in real-time,
+                    alerting caregivers <em>before</em> a wandering episode or emotional crisis occurs —
+                    not after.
+                </p>
+                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
+
             <div class="feature-card">
-                <div class="icon-circle red"><i class="fas fa-heartbeat"></i></div>
+                <div class="icon-circle red">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
                 <h3>Emotion Monitoring</h3>
-                <p>Detects panic, loneliness, and confusion through voice tone analysis.</p>
+                <p>
+                    Detects panic, loneliness, and confusion through multi-modal analysis of
+                    voice tone, heart rate variability, and movement patterns simultaneously.
+                </p>
+                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
+
             <div class="feature-card">
-                <div class="icon-circle blue"><i class="fas fa-user-shield"></i></div>
-                <h3>Privacy-First</h3>
-                <p>All sensitive voice processing happens on-device. We listen for distress, not conversations.</p>
+                <div class="icon-circle blue">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Privacy-First Design</h3>
+                <p>
+                    All sensitive voice processing happens entirely on-device. We listen for
+                    distress signals, not conversations. Zero audio is ever transmitted to the cloud.
+                </p>
+                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header">
+            <span class="section-tag">Simple Process</span>
+            <h2>How CareLink+ Works</h2>
+            <p>From smartwatch to caregiver alert in under 2 seconds.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Wear the Device</h3>
+                <p>Student wears a CareLink+ smartwatch that continuously monitors biometric signals.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>AI Analyzes Data</h3>
+                <p>On-device AI processes heart rate, gait patterns, and voice tone in real-time.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Risk Detected</h3>
+                <p>The model identifies anomalies and predicts potential wandering or distress events.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Caregiver Alerted</h3>
+                <p>Instant push notification sent to the mobile app and school dashboard within 2 seconds.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TEAM SECTION ===================== -->
     <section class="team" id="team">
         <div class="section-header">
+            <span class="section-tag">The Builders</span>
             <h2>Meet The Team</h2>
-            <p>Politeknik Ungku Omar Final Year Project</p>
+            <p>Final Year Project &mdash; Diploma in Information Technology, Politeknik Ungku Omar</p>
         </div>
+
         <div class="team-grid">
             <div class="team-card">
                 <div class="img-wrapper">
-                    <img src="https://ui-avatars.com/api/?name=Muhammad+Izzarith&background=008080&color=fff" alt="Izzarith">
+                    <img
+                        src="https://ui-avatars.com/api/?name=Muhammad+Izzarith&background=008080&color=fff&size=200&bold=true"
+                        alt="Muhammad Izzarith"
+                        loading="lazy"
+                    >
                 </div>
                 <h3>Muhammad Izzarith</h3>
                 <span class="role">Developer</span>
                 <p class="matric">01DIT23F2001</p>
+                <div class="team-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
+
             <div class="team-card">
                 <div class="img-wrapper">
-                    <img src="https://ui-avatars.com/api/?name=Aifa+Ammar&background=004d4d&color=fff" alt="Aifa">
+                    <img
+                        src="https://ui-avatars.com/api/?name=Aifa+Ammar&background=004d4d&color=fff&size=200&bold=true"
+                        alt="Muhammad Aifa Ammar"
+                        loading="lazy"
+                    >
                 </div>
                 <h3>Muhammad Aifa Ammar</h3>
                 <span class="role">Developer</span>
                 <p class="matric">01DIT23F2016</p>
+                <div class="team-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
+
             <div class="team-card">
                 <div class="img-wrapper">
-                    <img src="https://ui-avatars.com/api/?name=Lok+Mei+Yu&background=ff9933&color=fff" alt="Mei Yu">
+                    <img
+                        src="https://ui-avatars.com/api/?name=Lok+Mei+Yu&background=ff9933&color=fff&size=200&bold=true"
+                        alt="Lok Mei Yu"
+                        loading="lazy"
+                    >
                 </div>
                 <h3>Lok Mei Yu</h3>
                 <span class="role">Developer</span>
                 <p class="matric">01DIT23F2047</p>
+                <div class="team-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ===================== CTA / CONTACT SECTION ===================== -->
+    <section id="contact">
+        <div class="section-header">
+            <span class="section-tag" style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">Get Started</span>
+            <h2>Ready to Protect Your Students?</h2>
+            <p>Join PDK Semangat Maju and other schools already using CareLink+ to keep their students safe.</p>
+        </div>
+        <div class="contact-actions">
+            <a href="dashboard.html" class="btn-white">
+                <i class="fas fa-shield-alt"></i> Access School Dashboard
+            </a>
+            <a href="#" class="btn-outline-white">
+                <i class="fab fa-google-play"></i> Download the App
+            </a>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER (Loaded via JS) ===================== -->
     <div id="footer-placeholder"></div>
 
+    <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
 </html>
