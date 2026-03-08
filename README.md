@@ -49,7 +49,6 @@ CareLink+ is a predictive AI-powered care system designed for special needs stud
 ```
 CareLinkPlus-/
 ├── index.html          # Main landing page
-├── dashboard.html      # Admin dashboard
 ├── SPEC.md             # Technical specification document
 ├── README.md           # This file
 ├── css/
