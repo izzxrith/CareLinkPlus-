@@ -10,7 +10,7 @@ Politeknik Ungku Omar
 
 CareLink+ is a predictive AI-powered care system designed for special needs students and the elderly in Ipoh, Perak. This promotional website showcases the features and capabilities of the CareLink+ application.
 
-**Target Audience:** Parents, teachers, and caregivers of special needs students (SK Pinji, Ipoh) and elderly care facilities.
+**Target Audience:** Parents, teachers and caregivers of special needs students (SK Pinji, Ipoh) and elderly care facilities.
 
 **Vision:** Transform healthcare from reactive to proactive using wearable technology and AI.
 
