@@ -394,3 +394,18 @@ function animateCounter(elementId, target) {
     };
     requestAnimationFrame(update);
 }
+
+// =========================================================
+// UTILITY: Footer Year (Dynamic for Sesi II 25/26)
+// =========================================================
+function initFooterYear() {
+    const yearEl = document.getElementById("footerYear");
+    if (yearEl) {
+        yearEl.textContent = "2025-2026";
+    }
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    initFooterYear();
+});
