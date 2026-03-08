@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CareLink+ — Predictive AI care system for dementia patients and special needs students. Monitor heart rate, walking rhythm, and voice tone.">
-    <title>CareLink+ | The Guardian That Listens</title>
+    <meta name="description" content="CareLink+ — Smart care, Safe life. Predictive AI care system for special needs students and elderly. Monitor heart rate, detect falls, and analyze emotions in real-time.">
+    <title>CareLink+ | Smart care, Safe life</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,30 +19,54 @@
 </head>
 <body>
 
-    <!-- ===================== HEADER (Loaded via JS) ===================== -->
-    <div id="header-placeholder"></div>
+    <a href="#home" class="skip-link">Skip to main content</a>
 
-    <!-- ===================== HERO SECTION ===================== -->
-    <section class="hero" id="home">
+    <!-- ===================== HEADER ===================== -->
+    <nav class="main-nav" id="main-header">
+        <a href="index.html" class="logo">CareLink<span>+</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#problem-solution" class="nav-link">Why CareLink+</a></li>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#wear-os" class="nav-link">Wear OS</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="#features" class="btn-school-login">
+                <i class="fas fa-info-circle"></i> Learn More
+            </a>
+            <a href="#contact" class="btn-main">
+                <i class="fas fa-envelope"></i> Contact Us
+            </a>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO SECTION (NEW) ===================== -->
+    <section class="hero-new" id="home">
         <div class="hero-content">
             <div class="hero-badge">
-                <i class="fas fa-shield-alt"></i>
-                Politeknik Ungku Omar &mdash; FYP 2024/2025
+                <i class="fas fa-map-marker-alt"></i>
+                <span>SK Pinji Ipoh &bull; SPECIAL NEEDS STUDENT FYP 2025/2026</span>
             </div>
 
-            <h1>The Guardian That Listens<br><span>Before Crisis Happens</span></h1>
+            <h1>Smart care, Safe life</h1>
 
             <p>
-                CareLink+ uses predictive AI to monitor <strong>heart rate</strong>, <strong>walking rhythm</strong>,
-                and <strong>voice tone</strong> — alerting caregivers before a wandering episode or emotional crisis occurs.
+                CareLink+ acts as your Secondary Guardian — using predictive AI to monitor 
+                heart rate, detect falls, and analyze emotions in real-time. We shift 
+                healthcare from reactive to proactive, protecting your loved ones before 
+                crisis strikes.
             </p>
 
             <div class="hero-buttons">
-                <a href="dashboard.html" class="btn-main">
-                    <i class="fas fa-th-large"></i> View Dashboard
+                <a href="#contact" class="btn-main">
+                    <i class="fas fa-heartbeat"></i> Experience Predictive Care
                 </a>
                 <a href="#features" class="btn-secondary">
-                    <i class="fas fa-play-circle"></i> Learn More
+                    <i class="fas fa-play-circle"></i> View Features
                 </a>
             </div>
 
@@ -56,8 +80,12 @@
                     <div class="stat-label">Alert Response Time</div>
                 </div>
                 <div class="hero-stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">On-Device Privacy</div>
+                    <div class="stat-number">90</div>
+                    <div class="stat-label">Days Data Retention</div>
+                </div>
+                <div class="hero-stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Continuous Monitoring</div>
                 </div>
             </div>
         </div>
@@ -71,7 +99,6 @@
             <!-- Phone Mockup -->
             <div class="phone-wrapper">
                 <div class="phone-frame">
-                    <!-- If you have a real screenshot, replace this with: <img src="images/app-home.png" alt="CareLink+ App"> -->
                     <div class="phone-screen-placeholder">
                         <div class="app-logo">CareLink<span>+</span></div>
 
@@ -111,92 +138,230 @@
 
             <!-- Floating info badges -->
             <div class="float-badge float-badge-1">
-                <i class="fas fa-bell" style="color: var(--accent-orange);"></i>
+                <i class="fas fa-bell" style="color: var(--warning-amber);"></i>
                 <span>Alert sent in <strong>1.4s</strong></span>
             </div>
             <div class="float-badge float-badge-2">
-                <i class="fas fa-lock" style="color: var(--primary-teal);"></i>
+                <i class="fas fa-lock" style="color: var(--primary-green);"></i>
                 <span><strong>On-device</strong> AI</span>
             </div>
         </div>
     </section>
 
-    <!-- ===================== FEATURES SECTION ===================== -->
-    <section class="features" id="features">
+    <!-- ===================== PROBLEM vs SOLUTION SECTION ===================== -->
+    <section class="problem-solution" id="problem-solution">
         <div class="section-header">
-            <span class="section-tag">Core Technology</span>
-            <h2>Why Choose CareLink+?</h2>
-            <p>Moving from reactive safety nets to proactive, intelligent guardians that predict before crisis strikes.</p>
+            <span class="section-tag">Why CareLink+?</span>
+            <h2>From Waiting for Emergencies to Preventing Them</h2>
+            <p>See the difference between reactive care and predictive protection.</p>
         </div>
 
-        <div class="feature-grid">
-            <div class="feature-card">
+        <div class="problem-solution-grid">
+            <!-- Problem Card -->
+            <div class="problem-card">
                 <div class="icon-circle">
-                    <i class="fas fa-brain"></i>
+                    <i class="far fa-clock"></i>
                 </div>
-                <h3>Predictive AI Engine</h3>
+                <h3>Traditional Care Apps</h3>
                 <p>
-                    Our on-device machine learning model analyzes behavioral patterns in real-time,
-                    alerting caregivers <em>before</em> a wandering episode or emotional crisis occurs —
-                    not after.
+                    Most healthcare apps only respond AFTER a crisis occurs. 
+                    By the time you receive an alert, the emergency has already happened.
                 </p>
-                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
 
-            <div class="feature-card">
-                <div class="icon-circle red">
-                    <i class="fas fa-heartbeat"></i>
-                </div>
-                <h3>Emotion Monitoring</h3>
-                <p>
-                    Detects panic, loneliness, and confusion through multi-modal analysis of
-                    voice tone, heart rate variability, and movement patterns simultaneously.
-                </p>
-                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
-            </div>
+            <!-- VS Divider -->
+            <div class="vs-divider">VS</div>
 
-            <div class="feature-card">
-                <div class="icon-circle blue">
-                    <i class="fas fa-user-shield"></i>
+            <!-- Solution Card -->
+            <div class="solution-card">
+                <div class="icon-circle">
+                    <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3>Privacy-First Design</h3>
+                <h3>CareLink+ Predictive Care</h3>
                 <p>
-                    All sensitive voice processing happens entirely on-device. We listen for
-                    distress signals, not conversations. Zero audio is ever transmitted to the cloud.
+                    Our AI analyzes biometric patterns continuously, predicting 
+                    falls, emotional distress, and health anomalies BEFORE they happen.
+                    You intervene early, not after damage is done.
                 </p>
-                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- ===================== HOW IT WORKS ===================== -->
-    <section class="how-it-works" id="how-it-works">
+    <!-- ===================== FOUR PILLARS SECTION ===================== -->
+    <section class="four-pillars" id="features">
         <div class="section-header">
-            <span class="section-tag">Simple Process</span>
-            <h2>How CareLink+ Works</h2>
-            <p>From smartwatch to caregiver alert in under 2 seconds.</p>
+            <span class="section-tag">Four Pillars of Protection</span>
+            <h2>Complete Care, Zero Compromises</h2>
+            <p>Everything you need to keep your loved ones safe and healthy.</p>
         </div>
 
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <h3>Wear the Device</h3>
-                <p>Student wears a CareLink+ smartwatch that continuously monitors biometric signals.</p>
+        <div class="pillars-grid">
+            <!-- Pillar 1: Predictive Vitals & Fall Detection -->
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                </div>
+                <h3>Predictive Vitals & Fall Detection</h3>
+                <p>
+                    Real-time heart rate monitoring with automated alerts for falls 
+                    or pulse anomalies (Tachycardia/Bradycardia). Our AI detects 
+                    irregular patterns and alerts caregivers within 2 seconds.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Continuous heart rate monitoring</li>
+                    <li><i class="fas fa-check-circle"></i> Fall detection algorithm</li>
+                    <li><i class="fas fa-check-circle"></i> Tachycardia/Bradycardia alerts</li>
+                    <li><i class="fas fa-check-circle"></i> Real-time push notifications</li>
+                </ul>
             </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <h3>AI Analyzes Data</h3>
-                <p>On-device AI processes heart rate, gait patterns, and voice tone in real-time.</p>
+
+            <!-- Pillar 2: Smart Geofencing -->
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                </div>
+                <h3>Smart Geofencing</h3>
+                <p>
+                    "Safe Zone" tracking to prevent student 
+                    wandering. Set virtual boundaries and receive instant alerts 
+                    when someone exits the designated safe area.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Customizable safe zones</li>
+                    <li><i class="fas fa-check-circle"></i> Instant boundary breach alerts</li>
+                    <li><i class="fas fa-check-circle"></i> Historical location logging</li>
+                    <li><i class="fas fa-check-circle"></i> Multiple zone support</li>
+                </ul>
             </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <h3>Risk Detected</h3>
-                <p>The model identifies anomalies and predicts potential wandering or distress events.</p>
+
+            <!-- Pillar 3: Pulse-Based Emotion Analysis -->
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                </div>
+                <h3>Pulse-Based Emotion Analysis</h3>
+                <p>
+                    Translating heart rate data into emotional insights for 
+                    non-verbal students. Identify Calm, Agitated, or Distressed 
+                    states and respond appropriately before emotional escalation.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> HRV-based emotion detection</li>
+                    <li><i class="fas fa-check-circle"></i> Three-state emotional analysis</li>
+                    <li><i class="fas fa-check-circle"></i> Non-verbal communication support</li>
+                    <li><i class="fas fa-check-circle"></i> Historical emotion patterns</li>
+                </ul>
             </div>
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <h3>Caregiver Alerted</h3>
-                <p>Instant push notification sent to the mobile app and school dashboard within 2 seconds.</p>
+
+            <!-- Pillar 4: Localized Logistics -->
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <i class="fas fa-hospital" aria-hidden="true"></i>
+                </div>
+                <h3>Localized Logistics</h3>
+                <p>
+                    Integrated medical booking for Ipoh hospitals (KPJ Ipoh & HRPB) 
+                    and one-tap emergency dispatch. Direct connection to local 
+                    healthcare when every second counts.
+                </p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> One-tap emergency dispatch</li>
+                    <li><i class="fas fa-check-circle"></i> KPJ Ipoh appointment booking</li>
+                    <li><i class="fas fa-check-circle"></i> HRPB direct integration</li>
+                    <li><i class="fas fa-check-circle"></i> Emergency contact shortcuts</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== DATA RETENTION SECTION ===================== -->
+    <section class="data-retention">
+        <div class="section-header">
+            <span class="section-tag">Clinical-Grade Data</span>
+            <h2>90 Days of History for Better Decisions</h2>
+        </div>
+
+        <div class="data-retention-icon">
+            <i class="fas fa-database"></i>
+        </div>
+
+        <p>
+            All vital signs, location data, and emotional assessments are stored 
+            securely for 90 days. Review behavioral trends, track clinical progress, 
+            and share detailed reports with healthcare providers during consultations.
+        </p>
+
+        <div class="data-features">
+            <div class="data-feature-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>90-day historical logging</span>
+            </div>
+            <div class="data-feature-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Behavioral pattern analysis</span>
+            </div>
+            <div class="data-feature-item">
+                <i class="fas fa-file-export"></i>
+                <span>Clinical review exports</span>
+            </div>
+            <div class="data-feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>HIPAA-compliant storage</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== WEAR OS SECTION ===================== -->
+    <section class="wear-os" id="wear-os">
+        <div class="section-header">
+            <span class="section-tag">Zero-Typing Pairing</span>
+            <h2>Smartwatch Setup Made Simple</h2>
+            <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
+                Students and elderly users often struggle with complex device setup. 
+                CareLink+ uses "Zero-Typing" pairing - simply tap the smartwatch 
+                to the phone and all settings sync automatically.
+            </p>
+        </div>
+
+        <div class="wear-os-content">
+            <div class="wear-os-text">
+                <p>
+                    No passwords, no WiFi configuration, no typing required. 
+                    Get your loved ones protected in seconds, not minutes.
+                </p>
+
+                <div class="wear-os-steps">
+                    <div class="wear-step">
+                        <div class="wear-step-number">1</div>
+                        <div class="wear-step-content">
+                            <h4>Tap</h4>
+                            <p>Tap smartwatch to phone NFC</p>
+                        </div>
+                    </div>
+                    <div class="wear-step">
+                        <div class="wear-step-number">2</div>
+                        <div class="wear-step-content">
+                            <h4>Sync</h4>
+                            <p>Settings transfer automatically</p>
+                        </div>
+                    </div>
+                    <div class="wear-step">
+                        <div class="wear-step-number">3</div>
+                        <div class="wear-step-content">
+                            <h4>Ready</h4>
+                            <p>Device starts monitoring</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wear-os-visual">
+                <div class="watch-mockup">
+                    <div class="watch-screen">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>CareLink+</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -213,25 +378,25 @@
             <div class="team-card">
                 <div class="img-wrapper">
                     <img
-                        src="https://ui-avatars.com/api/?name=Muhammad+Izzarith&background=008080&color=fff&size=200&bold=true"
+                        src="https://ui-avatars.com/api/?name=Muhammad+Izzarith&background=2E7D32&color=fff&size=200&bold=true"
                         alt="Muhammad Izzarith"
                         loading="lazy"
                     >
                 </div>
                 <h3>Muhammad Izzarith</h3>
-                <span class="role">Developer</span>
+                <span class="role">Lead Developer</span>
                 <p class="matric">01DIT23F2001</p>
                 <div class="team-social">
                     <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="mailto:izzarith04@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
 
             <div class="team-card">
                 <div class="img-wrapper">
                     <img
-                        src="https://ui-avatars.com/api/?name=Aifa+Ammar&background=004d4d&color=fff&size=200&bold=true"
+                        src="https://ui-avatars.com/api/?name=Aifa+Ammar&background=1B5E20&color=fff&size=200&bold=true"
                         alt="Muhammad Aifa Ammar"
                         loading="lazy"
                     >
@@ -249,7 +414,7 @@
             <div class="team-card">
                 <div class="img-wrapper">
                     <img
-                        src="https://ui-avatars.com/api/?name=Lok+Mei+Yu&background=ff9933&color=fff&size=200&bold=true"
+                        src="https://ui-avatars.com/api/?name=Lok+Mei+Yu&background=4CAF50&color=fff&size=200&bold=true"
                         alt="Lok Mei Yu"
                         loading="lazy"
                     >
@@ -269,24 +434,79 @@
     <!-- ===================== CTA / CONTACT SECTION ===================== -->
     <section id="contact">
         <div class="section-header">
-            <span class="section-tag" style="background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);">Get Started</span>
+            <span class="section-tag">Get Started</span>
             <h2>Ready to Protect Your Students?</h2>
-            <p>Join PDK Semangat Maju and other schools already using CareLink+ to keep their students safe.</p>
+            <p>
+                Join schools already using CareLink+ to keep their students safe.
+            </p>
         </div>
         <div class="contact-actions">
-            <a href="dashboard.html" class="btn-white">
-                <i class="fas fa-shield-alt"></i> Access School Dashboard
-            </a>
-            <a href="#" class="btn-outline-white">
-                <i class="fab fa-google-play"></i> Download the App
+            <a href="#" class="btn btn-outline">
+                <i class="fab fa-google-play"></i> Download App
             </a>
         </div>
     </section>
 
-    <!-- ===================== FOOTER (Loaded via JS) ===================== -->
-    <div id="footer-placeholder"></div>
+    <!-- ===================== FOOTER (NEW with Mission) ===================== -->
+    <footer class="site-footer-new">
+        <div class="footer-new-grid">
+            <div class="footer-brand-new">
+                <a href="index.html" class="logo">CareLink<span>+</span></a>
+                <p class="tagline">Smart care, Safe life. Predictive AI care system for special needs students and the elderly in Ipoh.</p>
+                <div class="footer-social-new">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column-new">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#wear-os">Wear OS</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Download App</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column-new">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column-new">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:izzarith04@gmail.com"><i class="fas fa-envelope"></i> info@carelinkplus.my</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> 017-3667193</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Ipoh, Perak, Malaysia</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-new">
+            <p class="mission">
+                Our mission is to protect vulnerable communities in Ipoh by providing 
+                accessible, predictive healthcare technology for special needs students 
+                and the elderly.
+            </p>
+            <p class="copyright">&copy; <span id="footerYear"></span> CareLink+. Final Year Project &mdash; Diploma in Information Technology, <strong>Politeknik Ungku Omar</strong>.</p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
+    <script>
+        // Footer year for Sesi II 25/26
+        const yearEl = document.getElementById("footerYear");
+        if (yearEl) yearEl.textContent = "2025-2026";
+    </script>
 </body>
 </html>
