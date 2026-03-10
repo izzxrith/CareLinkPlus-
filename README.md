@@ -55,6 +55,8 @@ CareLinkPlus-/
 │   └── style.css       # Main stylesheet
 ├── js/
 │   └── script.js       # JavaScript functionality
+├── img/
+│   └── main.png        # Header Image 
 └── components/
     ├── header.html     # Reusable header component
     └── footer.html    # Reusable footer component
