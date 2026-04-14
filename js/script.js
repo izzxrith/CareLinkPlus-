@@ -115,3 +115,31 @@ function initFooterYear() {
         yearEl.textContent = "2025-2026";
     }
 }
+
+// =========================================================
+// IMAGE MODAL FUNCTIONS
+// =========================================================
+function openModal(imageSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    if (modal && modalImg) {
+        modalImg.src = imageSrc;
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById("imageModal");
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+}
+
+// Close modal on Escape key
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+        closeModal();
+    }
+});
