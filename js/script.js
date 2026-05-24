@@ -4,62 +4,63 @@
  * Authors: Muhammad Izzarith, Muhammad Aifa Ammar, Lok Mei Yu
  */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
 
     // =========================================================
     // 1. COMPONENT LOADER (Header & Footer)
     // =========================================================
-    const loadComponent = (placeholderId, filePath, callback) => {
-        const el = document.getElementById(placeholderId);
-        if (!el) return;
+    function loadComponent(placeholderId, filePath, callback) {
+        var el = document.getElementById(placeholderId);
+        if (!el) {
+            console.log("Placeholder not found: " + placeholderId);
+            return;
+        }
+        
         fetch(filePath)
-            .then(res => {
-                if (!res.ok) throw new Error(`Failed to load ${filePath}`);
+            .then(function(res) {
+                if (!res.ok) throw new Error("Failed to load " + filePath + " - Status: " + res.status);
                 return res.text();
             })
-            .then(html => {
+            .then(function(html) {
                 el.innerHTML = html;
                 if (callback) callback();
+                console.log("Loaded: " + filePath);
             })
-            .catch(err => console.warn(`Component load error: ${err.message}`));
-    };
-
-    if (document.getElementById("header-placeholder")) {
-        loadComponent("header-placeholder", "components/header.html", initNavigation);
-    }
-    if (document.getElementById("footer-placeholder")) {
-        loadComponent("footer-placeholder", "components/footer.html", initFooterYear);
+            .catch(function(err) {
+                console.warn("Component load error: " + err.message);
+                el.innerHTML = '<div style="background:red;color:white;padding:10px;text-align:center;">Footer failed to load. Check file path.</div>';
+            });
     }
 
-    // =========================================================
-    // 2. NAVIGATION (Mobile Toggle + Scroll Highlight)
-    // =========================================================
     function initNavigation() {
-        const toggle = document.getElementById("navToggle");
-        const navLinks = document.getElementById("navLinks");
-        const navActions = document.querySelector(".nav-actions");
+        var toggle = document.getElementById("navToggle");
+        var navLinks = document.getElementById("navLinks");
+        var navActions = document.querySelector(".nav-actions");
 
         if (toggle && navLinks) {
-            toggle.addEventListener("click", () => {
+            toggle.addEventListener("click", function() {
                 navLinks.classList.toggle("open");
-                if (navActions) navActions.classList.toggle("open");
-                const isOpen = navLinks.classList.contains("open");
+                if (navActions) {
+                    navActions.classList.toggle("open");
+                }
+                var isOpen = navLinks.classList.contains("open");
                 toggle.setAttribute("aria-expanded", isOpen);
             });
 
-            // Close on link click
-            navLinks.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", () => {
+            var links = navLinks.querySelectorAll("a");
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener("click", function() {
                     navLinks.classList.remove("open");
-                    if (navActions) navActions.classList.remove("open");
+                    if (navActions) {
+                        navActions.classList.remove("open");
+                    }
                 });
-            });
+            }
         }
 
-        // Sticky nav shadow on scroll
-        const nav = document.querySelector("nav.main-nav");
+        var nav = document.querySelector("nav.main-nav");
         if (nav) {
-            window.addEventListener("scroll", () => {
+            window.addEventListener("scroll", function() {
                 if (window.scrollY > 20) {
                     nav.style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)";
                 } else {
@@ -69,59 +70,58 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // =========================================================
-    // 3. SCROLL ANIMATIONS (Intersection Observer)
-    // =========================================================
-    const animateOnScroll = () => {
-        const targets = document.querySelectorAll(
-            ".feature-card, .team-card, .step-card, .hero-stat-item"
-        );
-        if (!targets.length) return;
+    // Load Header
+    if (document.getElementById("header-placeholder")) {
+        loadComponent("header-placeholder", "components/header.html", initNavigation);
+    } else {
+        console.log("Header placeholder not found - using inline header");
+        initNavigation();
+    }
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = "1";
-                        entry.target.style.transform = "translateY(0)";
-                    }, i * 80);
-                    observer.unobserve(entry.target);
+    // Load Footer
+    if (document.getElementById("footer-placeholder")) {
+        loadComponent("footer-placeholder", "components/footer.html", function() {
+            var yearEl = document.getElementById("footerYear");
+            if (yearEl) yearEl.textContent = "2025-2026";
+        });
+    } else {
+        console.log("Footer placeholder not found");
+        var yearEl = document.getElementById("footerYear");
+        if (yearEl) yearEl.textContent = "2025-2026";
+    }
+
+    // =========================================================
+    // 2. SCROLL ANIMATIONS
+    // =========================================================
+    var targets = document.querySelectorAll(".feature-card, .team-card, .hero-stat-item, .pillar-card, .madani-card");
+    
+    if (targets.length > 0) {
+        var observer = new IntersectionObserver(function(entries) {
+            for (var i = 0; i < entries.length; i++) {
+                if (entries[i].isIntersecting) {
+                    entries[i].target.style.opacity = "1";
+                    entries[i].target.style.transform = "translateY(0)";
+                    observer.unobserve(entries[i].target);
                 }
-            });
+            }
         }, { threshold: 0.1 });
 
-        targets.forEach(el => {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(30px)";
-            el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-            observer.observe(el);
-        });
-    };
-    animateOnScroll();
-
-    // =========================================================
-    // 4. DASHBOARD LOGIC
-    // =========================================================
-});
-
-
-
-// =========================================================
-// UTILITY: Footer Year (Dynamic for Sesi II 25/26)
-// =========================================================
-function initFooterYear() {
-    const yearEl = document.getElementById("footerYear");
-    if (yearEl) {
-        yearEl.textContent = "2025-2026";
+        for (var i = 0; i < targets.length; i++) {
+            targets[i].style.opacity = "0";
+            targets[i].style.transform = "translateY(30px)";
+            targets[i].style.transition = "opacity 0.6s ease, transform 0.6s ease";
+            observer.observe(targets[i]);
+        }
     }
-}
+
+});
 
 // =========================================================
 // IMAGE MODAL FUNCTIONS
 // =========================================================
 function openModal(imageSrc) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
     if (modal && modalImg) {
         modalImg.src = imageSrc;
         modal.style.display = "flex";
@@ -130,14 +130,13 @@ function openModal(imageSrc) {
 }
 
 function closeModal() {
-    const modal = document.getElementById("imageModal");
+    var modal = document.getElementById("imageModal");
     if (modal) {
         modal.style.display = "none";
         document.body.style.overflow = "auto";
     }
 }
 
-// Close modal on Escape key
 document.addEventListener("keydown", function(e) {
     if (e.key === "Escape") {
         closeModal();
