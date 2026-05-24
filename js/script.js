@@ -1,14 +1,12 @@
 /**
  * CareLink+ | Main JavaScript
- * Final Year Project - Politeknik Ungku Omar
+ * Final Year Project and Hackathon - Politeknik Ungku Omar
  * Authors: Muhammad Izzarith, Muhammad Aifa Ammar, Lok Mei Yu
  */
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    // =========================================================
-    // 1. COMPONENT LOADER (Header & Footer)
-    // =========================================================
+    // Component Loader (Header & Footer)
     function loadComponent(placeholderId, filePath, callback) {
         var el = document.getElementById(placeholderId);
         if (!el) {
@@ -90,9 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (yearEl) yearEl.textContent = "2025-2026";
     }
 
-    // =========================================================
-    // 2. SCROLL ANIMATIONS
-    // =========================================================
+    // Scroll Animations (Intersection Observer)
     var targets = document.querySelectorAll(".feature-card, .team-card, .hero-stat-item, .pillar-card, .madani-card");
     
     if (targets.length > 0) {
@@ -116,9 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-// =========================================================
-// IMAGE MODAL FUNCTIONS
-// =========================================================
+// Image Modal Functionality
 function openModal(imageSrc) {
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("modalImage");
