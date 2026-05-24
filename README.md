@@ -89,4 +89,4 @@ This project includes:
 - **Phone:** 017-3667193
 - **Location:** Ipoh, Perak, Malaysia
 
-![CareLink+ Promotional Website](img/main.png)
+![CareLink+ Promotional Website](img/Main1.png)
