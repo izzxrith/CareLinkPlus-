@@ -57,6 +57,9 @@ CareLinkPlus-/
 │   └── script.js       # JavaScript functionality
 ├── img/
 │   └── main.png        # Header Image 
+│   └── ClientProof1.jpeg        # Proof 1
+│   └── ClientProof2.jpeg        # Proof 2
+│   └── ClientProof3.jpeg        # Proof 3
 └── components/
     ├── header.html     # Reusable header component
     └── footer.html    # Reusable footer component
